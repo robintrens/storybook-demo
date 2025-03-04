@@ -32,6 +32,7 @@ export const Primary: Story = {
   args: {
     variant: "primary",
     children: "Click Me",
+    size: "sm",
   },
   render: (args) => <CustomButton {...args}>{args.children}</CustomButton>,
 };
@@ -40,6 +41,7 @@ export const Secondary: Story = {
   args: {
     variant: "secondary",
     children: "Click Me",
+    size: "sm",
   },
   render: (args) => <CustomButton {...args}>{args.children}</CustomButton>,
 };
@@ -48,6 +50,7 @@ export const Info: Story = {
   args: {
     variant: "info",
     children: "Click Me",
+    size: "sm",
   },
   render: (args) => <CustomButton {...args}>{args.children}</CustomButton>,
 };
@@ -56,6 +59,7 @@ export const Disabled: Story = {
   args: {
     variant: "disabled",
     children: "Click Me",
+    size: "sm",
   },
   render: (args) => <CustomButton {...args}>{args.children}</CustomButton>,
 };

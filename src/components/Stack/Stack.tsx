@@ -1,4 +1,5 @@
 import { CSSProperties, PropsWithChildren } from "react";
+import "./stack.css";
 
 type StackProps = PropsWithChildren & {
   orientaion: "horizondal" | "vertical";
@@ -20,8 +21,14 @@ const Stack = ({ children, orientaion, responsive }: StackProps) => {
     },
   };
   return (
-    <div style={{ width: "50%", border: "1px solid #e2e2e2", padding: "5px" }}>
-      <div style={{ ...orientaionStyles[orientaion] }}>{children}</div>
+    <div className="page">
+      <div
+        style={{ width: "50%", border: "1px solid #e2e2e2", padding: "5px" }}
+      >
+        <div className="stack" style={{ ...orientaionStyles[orientaion] }}>
+          {children}
+        </div>
+      </div>
     </div>
   );
 };

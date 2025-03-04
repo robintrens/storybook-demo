@@ -56,7 +56,12 @@ function createChildren(count: number) {
     .map((_, index) => {
       return (
         <div
-          style={{ width: "50px", height: "50px", backgroundColor: "red" }}
+          style={{
+            width: "50px",
+            height: "50px",
+            backgroundColor: "red",
+            animationDelay: `${index * 0.1}s`,
+          }}
           key={index}
         ></div>
       );

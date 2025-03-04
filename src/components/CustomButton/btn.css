@@ -1,3 +1,10 @@
+.customWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
 .customBtn {
   border-radius: 5px; /* Add unit (px) */
   padding: 5px 10px; /* Horizontal and vertical padding */

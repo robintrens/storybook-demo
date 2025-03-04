@@ -14,12 +14,14 @@ const CustomButton = ({
   size,
 }: CustomButtonProps) => {
   return (
-    <button
-      className={`customBtn btn--${variant} btn--${size}`}
-      onClick={onclick}
-    >
-      {children}
-    </button>
+    <div className="customWrapper">
+      <button
+        className={`customBtn btn--${variant} btn--${size}`}
+        onClick={onclick}
+      >
+        {children}
+      </button>
+    </div>
   );
 };
 

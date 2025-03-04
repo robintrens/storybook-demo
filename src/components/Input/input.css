@@ -1,5 +1,11 @@
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .customInput__wrapper {
-  width: 100%;
+  width: 30%;
   padding: 2px;
   position: relative;
   box-sizing: border-box;
@@ -8,7 +14,34 @@
   border: 1px solid #d3d3d3;
   width: 100%;
   outline: none;
-  padding: 0.4rem;
+  padding: 1rem;
   border-radius: 5px;
   color: #1c1c1c;
+  font-size: 16px;
+}
+.customInput__wrapper button {
+  width: 45px;
+  height: 30px;
+  border: none;
+  position: absolute;
+  right: -30px;
+  top: 15px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.customInput__wrapper button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.5s;
+  animation: slideup 100ms linear;
+}
+
+@keyframes slideup {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }

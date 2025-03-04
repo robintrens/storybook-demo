@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./input.css";
 
 type InputProps = {
@@ -40,27 +40,44 @@ const Input = ({
   autoComplete,
   readOnly,
 }: InputProps) => {
+  const [show, setShow] = useState(false);
+  function togglePass() {
+    setShow((p) => !p);
+  }
   return (
-    <div className={`customInput__wrapper ${className || ""}`}>
-      <input
-        className="customInput__control"
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        id={id}
-        name={name}
-        disabled={disabled}
-        required={required}
-        min={min}
-        max={max}
-        step={step}
-        pattern={pattern}
-        minLength={minLength}
-        maxLength={maxLength}
-        autoComplete={autoComplete}
-        readOnly={readOnly}
-      />
+    <div className="page">
+      <div className={`customInput__wrapper ${className || ""}`}>
+        <input
+          className="customInput__control"
+          type={
+            type === "text" ? type : type === "password" && show ? "text" : type
+          }
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+          id={id}
+          name={name}
+          disabled={disabled}
+          required={required}
+          min={min}
+          max={max}
+          step={step}
+          pattern={pattern}
+          minLength={minLength}
+          maxLength={maxLength}
+          autoComplete={autoComplete}
+          readOnly={readOnly}
+        />
+        {type === "password" && (
+          <button onClick={togglePass}>
+            {show ? (
+              <img src="eye-open.svg" alt="" />
+            ) : (
+              <img src="eye-close.svg" alt="" />
+            )}
+          </button>
+        )}
+      </div>
     </div>
   );
 };
