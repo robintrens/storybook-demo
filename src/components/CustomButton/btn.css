@@ -1,0 +1,64 @@
+.customBtn {
+  border-radius: 5px; /* Add unit (px) */
+  padding: 5px 10px; /* Horizontal and vertical padding */
+  outline: none; /* remove quotes */
+  border: none; /* remove quotes */
+  cursor: pointer; /* Add pointer cursor for better UX */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.customBtn.btn--sm {
+  padding: 0.4rem 0.8;
+  font-size: 1rem;
+}
+.customBtn.btn--md {
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+}
+.customBtn.btn--lg {
+  padding: 0.7rem 1.5rem;
+  font-size: 1.3rem;
+}
+
+.customBtn.btn--primary {
+  color: white;
+  background-color: #007bff; /* A more standard and accessible blue */
+}
+
+.customBtn.btn--secondary {
+  color: #333; /* Darker text for better contrast on gray */
+  background-color: #e0e0e0; /* A lighter, more modern gray */
+}
+
+.customBtn.btn--info {
+  color: white;
+  background-color: #dc3545; /* A standard red, from bootstrap, for consistency */
+}
+.customBtn.btn--disabled {
+  background-color: #a6a6a654;
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #a5a5a5;
+}
+
+/* Optional: Add hover and focus styles for better interactivity */
+.customBtn.btn:hover,
+.customBtn.btn:focus {
+  opacity: 0.9; /* Slightly reduce opacity on hover/focus */
+}
+
+.customBtn.btn--primary:hover,
+.customBtn.btn--primary:focus {
+  background-color: #0056b3; /*slightly darker blue on hover*/
+}
+
+.customBtn.btn--secondary:hover,
+.customBtn.btn--secondary:focus {
+  background-color: #c2c2c2; /*slightly darker grey on hover*/
+}
+
+.customBtn.btn--info:hover,
+.customBtn.btn--info:focus {
+  background-color: #c82333; /*slightly darker red on hover*/
+}
