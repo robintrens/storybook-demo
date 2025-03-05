@@ -1,0 +1,112 @@
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.page {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.wrapper {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+#c-select {
+  border: 1px solid #e2e2e2;
+  outline: none;
+  padding: 0.7rem;
+  border-radius: 10px;
+}
+.wrapper label {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.select__container {
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #1c1c1c;
+  height: 40px;
+  padding-left: 10px;
+}
+.select__container--sm {
+  height: 30px;
+  width: 10rem;
+}
+.select__container--md {
+  height: 40px;
+  width: 15rem;
+}
+.select__container--lg {
+  height: 50px;
+  width: 20rem;
+}
+.options__container {
+  border: 1px solid #e2e2e2;
+  position: absolute;
+  width: 100%;
+  top: 105%;
+  border-radius: 5px;
+  left: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10%);
+}
+.options__container.animated {
+  transition: all 0.2s;
+}
+.options__container.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0%);
+}
+.options__container .option {
+  cursor: pointer;
+  padding: 5px;
+}
+.options__container .option:hover {
+  background-color: aliceblue;
+}
+.searchOption {
+  border-radius: 5px;
+  border: 1px solid #e2e2e2;
+  position: sticky;
+  top: 0;
+}
+.searchOption__input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+.noResult {
+  padding: 5px;
+  font-size: 14px;
+}
+.clearBtn {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  font-size: 12px;
+  background-color: #e2e2e231;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
